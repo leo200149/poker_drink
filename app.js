@@ -63,7 +63,7 @@ function paintCard(card,point){
   ctx.fillText(card.num, CARD_WIDTH/2, CARD_HEIGHT/3);
   ctx.font = (50 *FONT_SIZE_RATE)+"px Arial";
   ctx.fillText(card.name, CARD_WIDTH/2, CARD_HEIGHT/3+(80 *FONT_SIZE_RATE));
- 	canvasTextAutoLine(card.desc,canvas, CARD_WIDTH/2, CARD_HEIGHT/3+(160 *FONT_SIZE_RATE),(30 *FONT_SIZE_RATE));
+ 	canvasTextAutoLine(card.desc,canvas, CARD_WIDTH/2, CARD_HEIGHT/3+(120 *FONT_SIZE_RATE),(30 *FONT_SIZE_RATE));
 }
 
 function canvasTextAutoLine(str,canvas,initX,initY,lineHeight){
