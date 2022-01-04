@@ -8,6 +8,7 @@ const WIDTH=250;
 const HEIGHT=400;
 const CARD_WIDTH = canvas.width;
 const CARD_HEIGHT = canvas.height;
+const FONT_SIZE_RATE = canvas.height/HEIGHT;
 const POSITION = 0;
 
 
@@ -58,16 +59,16 @@ function paintCard(card,point){
   ctx.stroke();
   ctx.textAlign = "center";
   ctx.fillStyle = card.color;
-  ctx.font = "150px Arial";
+  ctx.font =  (150 *FONT_SIZE_RATE)+"px Arial";
   ctx.fillText(card.num, CARD_WIDTH/2, CARD_HEIGHT/3);
-  ctx.font = "50px Arial";
-  ctx.fillText(card.name, CARD_WIDTH/2, CARD_HEIGHT/3+80);
- 	canvasTextAutoLine(card.desc,canvas, CARD_WIDTH/2, CARD_HEIGHT/3+160,30);
+  ctx.font = (50 *FONT_SIZE_RATE)+"px Arial";
+  ctx.fillText(card.name, CARD_WIDTH/2, CARD_HEIGHT/3+(80 *FONT_SIZE_RATE));
+ 	canvasTextAutoLine(card.desc,canvas, CARD_WIDTH/2, CARD_HEIGHT/3+(160 *FONT_SIZE_RATE),(30 *FONT_SIZE_RATE));
 }
 
 function canvasTextAutoLine(str,canvas,initX,initY,lineHeight){
     var ctx = canvas.getContext("2d"); 
- 		 ctx.font = "16px Arial";
+ 		 ctx.font = (16 *FONT_SIZE_RATE)+"px Arial";
     var lineWidth = 0;
     var canvasWidth = CARD_WIDTH; 
     var lastSubStrIndex= 0; 
